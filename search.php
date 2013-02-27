@@ -12,13 +12,9 @@ get_header(); ?>
 			<h1><?php printf( __( 'Search Results for: %s', 'migration' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 		</header>
 
-		<?php migration_content_nav( 'nav-above' ); ?>
-
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'content' ); ?>
 		<?php endwhile; ?>
-
-		<?php migration_content_nav( 'nav-below' ); ?>
 
 	<?php else : ?>
 
